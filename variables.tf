@@ -118,3 +118,50 @@ variable "health_check_unhealthy_threshold" {
 
     default = 2 # Terraform default is 2
 }
+
+# RDS Specific Variables
+variable "rds_database_name" {
+  description = "Name of RDS Database"
+}
+variable "db_engine_version" {
+  description = "RDS Database Engine Version"
+  default     = "11.4"
+}
+variable "db_instance_class" {
+  description = "Database Instance Class"
+  default     = "db.t2.micro"
+}
+variable "db_storage_size" {
+  description = "Database Storage Size"
+  default     = "100"
+}
+variable "db_backup_retention_period" {
+  description = "Database Backup Retention Period"
+  default     = "7"
+}
+variable "db_multi_az" {
+  description = "Databse Multi-AZ"
+  default     = false
+}
+variable "rds_user" {
+  description = "Name of the RDS Root User for the RDS"
+}
+variable "rds_password" {
+  description = "Name of the RDS Root Password for the RDS"
+}
+variable "db_final_snapshot_identifier" {
+  description = "RDS Final Snapshot Identifier"
+  default     = ""
+}
+variable "db_instance_count" {
+  description = "Database Instance Count"
+  default     = 1
+}
+variable "db_family" {
+  description = "Database Family"
+  default     = "postgres11"
+}
+variable "description" {
+  description = "Description for the Parameter Group"
+  default     = "AWS APP VPC"
+}
