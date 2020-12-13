@@ -80,3 +80,41 @@ variable "ec2_root_volume_type" {
 
   default = "gp2"
 }
+
+# Load Balancer Variables
+variable "enable_deletion_protection" {
+    description = "Boolean to enable delete protection on the ALB"
+    type        = string
+
+    default = false # Terraform default is false
+}
+variable "health_check_healthy_threshold" {
+    description = "Number of consecutives checks before an unhealthy target is considered healthy"
+    type        = string
+
+    default = 5 # Terraform default is 5
+}
+variable "idle_timeout" {
+    description = "Seconds a connection can idle before being disconnected"
+    type        = string
+
+    default = 60 # Terraform default is 60
+}
+variable "health_check_interval" {
+    description = "Seconds between health checks"
+    type        = string
+
+    default = 5 # Terraform default is 30
+}
+variable "health_check_timeout" {
+    description = "Seconds waited before a health check fails"
+    type        = string
+
+    default = 3 # Terraform default is 5
+}
+variable "health_check_unhealthy_threshold" {
+    description = "Number of consecutive checks before considering a target unhealthy"
+    type        = string
+
+    default = 2 # Terraform default is 2
+}
