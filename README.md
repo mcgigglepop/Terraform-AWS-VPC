@@ -14,7 +14,7 @@ By default, the following resources will be provisioned in `us-east-1`:
 - A Public Bastion Host
 - A Private EC2 Auto-scaling Group
 - Cloudwatch Alarms for Healthy Load Balancer Nodes
-- Docker RDS Container
+- Docker RDS Container*
 - Docker Web Container
 - An RDS Instance
 - Additional Networking Resources (e.g. Nat Gateways, Elastic IP Addresses, etc.)
